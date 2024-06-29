@@ -1,7 +1,9 @@
 /********************************************** */
+// Chargement des données
 init()
 function init() {
-    getWorks();  
+    getWorks();
+    getCategories();
 }
 // Récupération des travaux
 function getWorks () {
@@ -9,29 +11,28 @@ function getWorks () {
     .then(result=>result.json())
     .then(works=>displayWorks(works))
 }
-// appeler la fonction pour afficher les travaux
+// Affichage des travaux
 function displayWorks (works) {
-    const gallery = document.querySelector(".gallery")
-    gallery.innerHTML = "";
-    for(let work of works) {
-        let figure = document.createElement("figure");
-        figure.dataset.categoryId = work.categoryId
-        let img = document.createElement("img");
-        img.setAttribute("src",work.imageUrl);
-        img.setAttribute("alt",work.title);
-        let figCaption = document.createElement("figcaption");
-        figCaption.innerText = work.title;
-        figure.append(img);
-        figure.append(figCaption);
-          // gallery.append(figure);
-        console.log(figure);
-        document.querySelector(".gallery").append(figure); 
-
-
-
-        
-
+    const gallery = document.querySelector(".gallery");
+    gallery.innerHTML ="";
+    for (let work of works) {
+        let figureElement = document.createElement("figure");
+// Création de l'image
+        const imgElement = document.createElement("img");
+        imgElement.src = work.imageUrl;
+        figureElement.appendChild(imgElement);
+// Création de la légende
+        const figcaptionElement = document.createElement("figcaption")
+        figcaptionElement.innerText = work.title;
+        figureElement.appendChild(figcaptionElement)
+// Ajout de la figure dans la gallery
+       gallery.appendChild(figureElement)
     }
-
-
 }
+
+// Récupération des travaux par catégorie via l'API
+//function getCategories () {
+    fetch("http://localhost:5678/api/categories")
+    .then(result =>result.json())
+    .then(categories=>displayCategories(categories))
+
