@@ -41,7 +41,7 @@ function displayCategories (categories) {
      bouttonFilterTous.setAttribute("class", "btn-tous");
      bouttonFilterTous.textContent = "Tous";
      filters.appendChild(bouttonFilterTous)
-     // afficher les catégories
+     // affichage les filtres par catégories
     for(let categorie of categories) {
         let buttons = document.createElement("button");
         buttons.innerText = categorie.name;
