@@ -137,30 +137,6 @@ li:hover {
 	width: 100%;
 
 }
-/********* Filtre des catégories *******/
-.filters {
-	display: flex;
-	margin-left: 307px;
-	width: 585px;
-	height: 38px;
-	margin-top: 35px;
-	margin-bottom: 35px;
-}
-.btnFilter,
-.btn-tous {
-	border-radius: 60px;
-	border: 1px solid #1d6154;
-	size: 16px;
-	font-weight: 700;
-	background-color: white;
-	padding: 5px 15px;
-	margin-right: 10px;
-}
-button:hover {
-	background-color: #1d6154;
-	color: white;
-
-}
 #contact {
 	width: 50%;
 margin: auto;
@@ -169,7 +145,7 @@ margin: auto;
 	text-align: center;
 
 }
-#contact h2{
+#contact h2 {
 	margin-bottom: 20px;
 }
 #contact form {
@@ -203,10 +179,66 @@ input[type="submit"]{
 	text-align: center;
 	border-radius: 60px ;
 }
-
 footer nav ul {
 	display: flex;
 	justify-content: flex-end;
 	margin: 2em
 }
+/********* Filtre des catégories *******/
+.filters {
+	display: flex;
+	margin-left: 307px;
+	width: 585px;
+	height: 38px;
+	margin-top: 35px;
+	margin-bottom: 35px;
+}
+.btnFilter,
+.btn-tous {
+	border-radius: 60px;
+	border: 1px solid #1d6154;
+	size: 16px;
+	font-weight: 700;
+	background-color: white;
+	padding: 5px 15px;
+	margin-right: 10px;
+}
+button:hover {
+	background-color: #1d6154;
+	color: white;
+
+}
+/******* For login *****/
+#Login {
+	width: 50%;
+	margin: auto;
+	text-align: center;
+}
+#Login form {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+}
+#Login label {
+	margin: 32px 0 16px 0;
+}
+#Login input {
+	height: 51px;
+	border: none;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+#Login button {
+	background: none;
+	border: none;
+	color: black;
+	font-size: 1em;
+	cursor: pointer;
+}
+#Login button:hover {
+	text-decoration: underline;
+}
+
+
+
+
 
