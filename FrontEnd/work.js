@@ -62,3 +62,26 @@ function displayCategories(categories) {
     filters.appendChild(buttons);
   }
 }
+const authToken = localStorage.getItem("authToken");
+const editMode = document.getElementById("edit-mode");
+const editButton = document.getElementById("edit-button");
+const logOut = document.getElementById("login-btn");
+const filters = document.getElementById("filters");
+// Afficher les éléments en mode édition si un token d'authentification est présent
+if (authToken) {
+  editMode.style.display = "flex";
+  editButton.style.display = "flex";
+  filters.style.display = "none";
+  logOut.textContent = "logout";
+} else {
+  logOut.textContent = "login";
+}
+// Pour la déconnexion
+logOut.addEventListener("click", function () {
+  if (authToken) {
+    localStorage.removeItem("authToken");
+    location.reload();
+  } else {
+    console.error("Un ou plusieurs éléments du DOM n'ont pas été trouvés.");
+  }
+});

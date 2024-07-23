@@ -7,17 +7,21 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 	<meta name="description" content="">
 	<link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
+	<div id="edit-mode" class="hidden">
+        <p><i class="fa-regular fa-pen-to-square"></i> Mode édition</p>
+    </div>
 <header>
 	<h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
 	<nav>
 		<ul>
 			<li><a href="#">projets</a></li>
 			<li><a href="#">contact</a></li>
-			<li><a href="login.html">login</a></li>
+			<li><a id="login-btn" href="login.html">login</a></li>
 			<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
 		</ul>
 	</nav>
@@ -35,7 +39,12 @@
 		</article>
 	</section>
 	<section id="portfolio">
-		<h2>Mes Projets</h2>
+		<div class="portfolio-header">
+			<h2>Mes Projets</h2>
+			<button  id="edit-button" class="edit-button hidden">
+				<i class="fa-regular fa-pen-to-square"></i> modifier
+			</button>
+		</div>	
 		<div id="filters" class="filters"></div>
 		<div class="gallery">
 		</div>

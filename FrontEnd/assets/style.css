@@ -53,6 +53,40 @@ body {
 	font-family: 'Work Sans' ;
 	font-size: 14px;
 }
+/************* edition *****************/
+
+#edit-mode {
+    background-color: black;
+    color: white;
+  justify-content: center;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.hidden {
+    display: none;
+}
+#edit-mode i {
+	padding-right: 5px;
+}
+/*************** edition button *************/
+.portfolio-header {
+	display: flex;
+	justify-content: center;
+}
+.edit-button {
+	background-color:#FFFEF8;
+	color: rgb(0, 0, 0);
+	border: none;
+	padding: 10px 20px;
+	font-size: 14px;
+	font-weight: 400;
+}
+#edit-button i {
+	padding-right: 5px;
+}
 header {
 	display: flex;
 	justify-content: space-between;
