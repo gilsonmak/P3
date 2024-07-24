@@ -38,13 +38,21 @@
 			<p>En cas de besoin, une équipe pluridisciplinaire peut-être constituée : architecte DPLG, décorateur(trice)</p>
 		</article>
 	</section>
+	<div class="modal-container">
+		<div class="overlay modal-trigger"></div>
+		<div class="modal">
+			<buttons class="close-modal modal-trigger">x</buttons>
+			<h3>Galerie photo</h3>
+		</div>
+
+	</div>
 	<section id="portfolio">
 		<div class="portfolio-header">
 			<h2>Mes Projets</h2>
-			<button  id="edit-button" class="edit-button hidden">
+			<buttons  id="edit-button" class="edit-button modal-trigger hidden">
 				<i class="fa-regular fa-pen-to-square"></i> modifier
-			</button>
-		</div>	
+			</buttons>
+		</div>
 		<div id="filters" class="filters"></div>
 		<div class="gallery">
 		</div>
@@ -72,5 +80,6 @@
 	</nav>
 </footer>
 <script src="work.js"></script>
+<script src="modal.js"></script>
 </body>
 </html>
