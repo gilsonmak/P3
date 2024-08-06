@@ -21,7 +21,6 @@ function login() {
       .then((data) => {
         if (data.token) {
           localStorage.setItem("authToken", data.token);
-          console.log(data.token);
           alert("Connexion réussie ! Redirection...");
           window.location.href = "index.html";
         } else {

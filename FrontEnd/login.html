@@ -15,9 +15,9 @@
         <h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
         <nav>
             <ul>
-                <li><a href="index.html">projets</a></li>
-                <li>contact</li>
-                <li>login</li>
+                <li id="projets"><a href="index.html">projets</a></li>
+                <li id="contact"><a href="index.html">contact</a></li>
+                <li><a href="#">login</a></li>
                 <li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
             </ul>
         </nav>
@@ -40,11 +40,27 @@
     <footer>
         <nav>
             <ul>
-                <li>Mentions Légales</li>
+                <li><a href="#">Mentions Légales</a></li>
             </ul>
         </nav>
 
     </footer>
     <script src="login.js"></script>
+    <script>
+            document
+        .getElementById("projets")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+          window.location.href = "index.html#portfolio";
+        });
+      document
+        .getElementById("contact")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+          window.location.href = "index.html#contact";
+        });
+
+
+    </script>
 </body>
 </html>

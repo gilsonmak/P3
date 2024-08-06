@@ -41,11 +41,12 @@ function displayCategories(categories) {
   filters.innerHTML = "";
   //creation de la balise button "tous" en dehors de la boucle puisque hors catégorie
   const bouttonFilterAll = document.createElement("button");
-  bouttonFilterAll.setAttribute("class", "btn-tous");
+  bouttonFilterAll.setAttribute("class", "btn-tous btnFilter active");
   bouttonFilterAll.textContent = "Tous";
   bouttonFilterAll.dataset.categorieId = "All";
   // Ajout d'un évenement
-  bouttonFilterAll.addEventListener("click", () => {
+  bouttonFilterAll.addEventListener("click", (event) => {
+    setActiveFilter(event.target);
     getWorks("All");
   });
   filters.appendChild(bouttonFilterAll);
@@ -53,15 +54,30 @@ function displayCategories(categories) {
   for (let categorie of categories) {
     let buttons = document.createElement("button");
     buttons.innerText = categorie.name;
-    console.log(categorie);
     buttons.dataset.categorieId = categorie.id;
     buttons.classList.add("btnFilter");
     buttons.addEventListener("click", (event) => {
+      setActiveFilter(event.target);
       getWorks(event.target.dataset.categorieId);
     });
     filters.appendChild(buttons);
   }
 }
+// Fonction pour définir le filtre actif
+function setActiveFilter(activeButton) {
+  const filterButtons = document.querySelectorAll(".btnFilter");
+  filterButtons.forEach((button) => button.classList.remove("active"));
+  activeButton.classList.add("active");
+
+  // Spécifique pour le bouton "Tous"
+  const allButton = document.querySelector(".btn-tous");
+  if (activeButton !== allButton) {
+    allButton.classList.remove("active");
+  } else {
+    allButton.classList.add("active");
+  }
+}
+
 const authToken = localStorage.getItem("authToken");
 const editMode = document.getElementById("edit-mode");
 const editButton = document.getElementById("edit-button");
