@@ -327,7 +327,7 @@ button:hover {
 	background: #333333d3;
 }
 .modal {
-	display: none;
+	display: flex;
 	flex-direction: column;
 	align-items: center;
 	background: white;
@@ -377,6 +377,10 @@ button:hover {
 	cursor: pointer;
 }
 
+.fond-icone:hover {
+	background-color: red;
+}
+
 .fond-icone i {
 	color: #fff;
 
@@ -405,7 +409,7 @@ button:hover {
 	font-size: 26px;
 }
 
-.separator {
+.line {
 	width: 435px;
 	height: 3px;
 	background-color: #aaa;
@@ -423,21 +427,8 @@ button:hover {
 	font-weight: 700;
 }
 /***************** Modale2 ***********************/
-.modal-add {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	background: white;
-	height: auto;
-	margin: 15% auto;
-	padding: 20px;
-	border-radius: 5px;
-	width: 630px;
-	height: 680px;
-	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-	position: relative;
-}
 #back-modal {
+	display: none;
 	padding: 8px 10px;
 	border-radius: 5px;
 	font-size: 28px;
@@ -447,28 +438,24 @@ button:hover {
 	background: #fff;
 	color: #aaa;
 }
-.modal-container2 {
-	width: 70%;
-	margin: auto;
-	border-bottom: 1.7px solid rgb(174, 173, 173);
+#back-modal:hover {
+	color: black;
+	cursor: pointer;
+
 }
-.modal-container2 h3 {
+
+
+.modal-h3 {
+	display: none;
 	text-align: center;
 	margin-top: 30px;
 	margin-bottom: 30px;
 	font-size: 26px;
+
 }
-#close-modal {
-	padding: 8px 10px;
-	border-radius: 5px;
-	font-size: 28px;
-	position: absolute;
-	top: 20px;
-	right: 30px;
-	background: #fff;
-	color: #aaa;
-}
+
 .modal-new-photo {
+	display: none;
 	background: rgb(232, 241, 246);
 	width: 420px;
 	border-radius: 3px;
@@ -496,6 +483,7 @@ button:hover {
 	background: rgb(185, 197, 204);
 	padding: 8px 20px;
 	border-radius: 50px;
+	cursor: pointer;
 }
 .photo-size {
 	font-size: 0.7rem;
@@ -503,7 +491,7 @@ button:hover {
 }
 .modal-new-category,
 .selectCategorie {
-	display: flex;
+	display: none;
 	flex-direction: column;
 	text-align: left;
 }
@@ -517,3 +505,14 @@ input select {
 .modal-new-category label {
 	margin: 20px 0 10px 0;
 }
+.modale-button {
+	display: none;
+	margin-bottom: 20px;
+	border: 1px solid #a7a7a7;
+	padding: 5px 15px;
+	border-radius: 60px;
+	cursor: pointer;
+	font-size: 16px;
+	font-weight: 700;
+}
+
