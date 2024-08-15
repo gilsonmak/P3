@@ -275,7 +275,7 @@ footer nav ul {
 }
 
 button:hover {
-	background-color: #1d6154;
+	background-color: #1D6154;
 	color: white;
 }
 
@@ -418,6 +418,8 @@ button:hover {
   }
 #add-photo-button {
 	display: block;
+	background: #0E2F28;
+	color: #fff;
 	margin-bottom: 20px;
 	border: 1px solid #1d6154;
 	padding: 5px 15px;
@@ -425,6 +427,11 @@ button:hover {
 	cursor: pointer;
 	font-size: 16px;
 	font-weight: 700;
+}
+
+#add-photo-button:hover {
+	background: #1D6154;
+	color: white;
 }
 /***************** Modale2 ***********************/
 #back-modal {
@@ -491,7 +498,9 @@ button:hover {
 }
 
 .modale-button {
-	display: flex;
+	width: 237px;
+	background: #a7a7a7;
+	color: #fff;
 	margin-bottom: 20px;
 	border: 1px solid #a7a7a7;
 	padding: 5px 15px;
