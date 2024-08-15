@@ -88,17 +88,10 @@ async function deleteWork(workId, workElement) {
 
 addPhotoButton.addEventListener("click", () => {
   // Masquer les éléments
-  document.querySelector(".modal-gallery").style.display = "none";
-  document.querySelector(".modal h3").style.display = "none";
-  document.querySelector("#add-photo-button").style.display = "none";
-
+  document.querySelector("#modal1").style.display = "none";
   // Afficher les éléments
   document.querySelector("#back-modal").style.display = "block";
-  document.querySelector(".modal-h3").style.display = "block";
-  document.querySelector(".modal-new-photo").style.display = "block";
-  document.querySelector(".modal-new-category").style.display = "flex";
-  document.querySelector(".selectCategorie").style.display = "block";
-  document.querySelector("#btn-valider").style.display = "block";
+  document.querySelector("#modal2").style.display = "flex";
 });
 
 document.querySelector(".photo-file").addEventListener("click", () => {
@@ -106,15 +99,7 @@ document.querySelector(".photo-file").addEventListener("click", () => {
 });
 backModal.addEventListener("click", () => {
   // Afficher les éléments
-  document.querySelector(".modal-gallery").style.display = "flex";
-  document.querySelector(".modal h3").style.display = "flex";
-  document.querySelector("#add-photo-button").style.display = "flex";
-
+  document.querySelector("#modal1").style.display = "flex";
   // Masquer les éléments
-  document.querySelector("#back-modal").style.display = "none";
-  document.querySelector(".modal-h3").style.display = "none";
-  document.querySelector(".modal-new-photo").style.display = "none";
-  document.querySelector(".modal-new-category").style.display = "none";
-  document.querySelector(".selectCategorie").style.display = "none";
-  document.querySelector("#btn-valider").style.display = "none";
+  document.querySelector("#modal2").style.display = "none";
 });
