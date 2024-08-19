@@ -418,7 +418,7 @@ button:hover {
   }
 #add-photo-button {
 	display: block;
-	background: #0E2F28;
+	background: #1D6154;
 	color: #fff;
 	margin-bottom: 20px;
 	border: 1px solid #1d6154;
@@ -430,7 +430,7 @@ button:hover {
 }
 
 #add-photo-button:hover {
-	background: #1D6154;
+	background: #0E2F28;
 	color: white;
 }
 /***************** Modale2 ***********************/
@@ -509,6 +509,11 @@ button:hover {
 	font-size: 16px;
 	font-weight: 700;
 }
+
+#btn-valider:hover {
+	background: #0E2F28;
+	color: #fff;
+}
 /******** Style formulaire modale ****/
 
 #form-modale {
@@ -520,7 +525,7 @@ button:hover {
 
 #form-modale input {
 	width: 420px;
-	height: 36px;
+	height: 51px;
 	padding: 0;
 	font-size: 1.2em;
 	border: none;
@@ -562,7 +567,7 @@ button:hover {
 
 .selectCategorie select {
 	width: 420px;
-	height: 36px;
+	height: 51px;
 	font-size: 1.2em;
 	border: none;
 	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);

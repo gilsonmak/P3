@@ -94,12 +94,51 @@ addPhotoButton.addEventListener("click", () => {
   document.querySelector("#modal2").style.display = "flex";
 });
 
-document.querySelector(".photo-file").addEventListener("click", () => {
-  document.querySelector("#avatar").click();
-});
+document.querySelector(".photoAdd").addEventListener("click", () => {});
+
 backModal.addEventListener("click", () => {
   // Afficher les éléments
   document.querySelector("#modal1").style.display = "flex";
   // Masquer les éléments
   document.querySelector("#modal2").style.display = "none";
+  document.querySelector("#back-modal").style.display = "none";
 });
+
+//Fonction pour récupérer les catégories depuis l'API et les placer dans la liste déroulante Catégorie du formulaire
+async function fetchCategories() {
+  const apiUrl = "http://localhost:5678/api";
+  const getCategoriesUrl = `${apiUrl}/categories`;
+  try {
+    const response = await fetch(getCategoriesUrl);
+    if (!response.ok) {
+      throw new Error(`Erreur HTTP ! Statut : ${response.status}`);
+    }
+    const categories = await response.json();
+    return categories;
+  } catch (error) {
+    console.error("Erreur lors de la récupération des catégories :", error);
+    return [];
+  }
+}
+//Fonction pour créer les éléments <option> et les ajouter au <select> de la liste déroulante Catégorie du formulaire
+async function populateCategoryOptions() {
+  const categories = await fetchCategories();
+  const categorySelect = document.getElementById("categorie");
+  if (categorySelect) {
+    // Vider le <select> avant d'ajouter de nouvelles options
+    categorySelect.innerHTML =
+      '<option value="" disabled selected>Sélectionnez une catégorie</option>';
+    categories.forEach((category) => {
+      const option = document.createElement("option");
+      option.value = category.id;
+      option.textContent = category.name;
+      categorySelect.appendChild(option);
+    });
+  } else {
+    console.error(
+      "L'élément <select> avec l'ID 'categorie' n'a pas été trouvé."
+    );
+  }
+}
+// Appel de la fonction pour remplir les options de catégories
+populateCategoryOptions();
