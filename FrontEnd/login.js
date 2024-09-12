@@ -21,7 +21,7 @@ function login() {
       .then((data) => {
         if (data.token) {
           localStorage.setItem("authToken", data.token);
-          alert("Connexion réussie ! Redirection...");
+          // alert("Connexion réussie ! Redirection...");
           window.location.href = "index.html";
         } else {
           // Affichage d'un message d'erreur si les informations de connexion sont incorrectes
