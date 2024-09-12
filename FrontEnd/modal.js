@@ -40,16 +40,13 @@ closeModal.addEventListener("click", () => {
   // Afficher les éléments
   document.querySelector("#modal1").style.display = "flex";
   // Masquer les éléments
-  console.log("toto");
   document.querySelector("#modal2").style.display = "none";
   document.querySelector("#back-modal").style.display = "none";
 });
 
 modalContainer.addEventListener("click", function (event) {
   const modalContent = document.querySelector(".modal");
-  console.log("tata");
   if (!modalContent.contains(event.target)) {
-    console.log("tutu");
     closeModal.click();
     toggleModal();
   }
