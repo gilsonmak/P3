@@ -77,6 +77,7 @@ async function begin() {
       logoSupp.appendChild(icon);
       logoSupp.id = "suppPhoto";
       logoSupp.dataset.workId = work.id;
+      figureElement.appendChild(logoSupp);
 
       // Ajout de l'écouteur de click pour suppression
       logoSupp.addEventListener("click", async (event) => {
@@ -84,7 +85,6 @@ async function begin() {
         const workId = event.currentTarget.dataset.workId;
         await deleteWork(workId, figureElement);
       });
-      figureElement.appendChild(logoSupp);
       // Ajout de la figure dans la gallery
       modalGallery.appendChild(figureElement);
     }
@@ -197,7 +197,7 @@ formAddWork.appendChild(form);
 
 //####################################################################
 //############ Gestion du bouton ajouter une photo ##################
-// Clique sur le bouton ajouter
+// Clique sur le bouton ajouter photo
 addPhotoButton.addEventListener("click", () => {
   resetFormFields(); // Appeler la fonction de réinitialisation avant d'ouvrir la modale
   // Masquer les éléments
